@@ -153,6 +153,36 @@ en: {}
 
 function setLanguage(lang){
 
+    const elements = document.querySelectorAll("h1,h2,h3,p,span,a");
+
+    elements.forEach(el=>{
+
+        let text = el.textContent.trim();
+
+        if(lang === "pl"){
+
+            if(translations.pl[text]){
+
+                el.textContent = translations.pl[text];
+
+            }
+
+        }
+
+        if(lang === "en"){
+
+            if(translations.en[text]){
+
+                el.textContent = translations.en[text];
+
+            }
+
+        }
+
+    });
+
+}
+
 
 document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
