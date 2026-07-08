@@ -3,32 +3,47 @@
 // script.js
 // ===============================
 
+
 // Плавное появление секций
+
 const observer = new IntersectionObserver((entries)=>{
+
     entries.forEach(entry=>{
+
         if(entry.isIntersecting){
+
             entry.target.classList.add("show");
+
         }
+
     });
+
 },{
     threshold:0.15
 });
 
+
 document.querySelectorAll("section,.item").forEach(el=>{
+
     el.classList.add("hidden");
+
     observer.observe(el);
+
 });
 
-// -----------------------------
+
+
+// ===============================
 // Переключение языка
-// -----------------------------
+// ===============================
 
-function setLanguage(lang){
 
-const pl = {
+const translations = {
+
+pl: {
 
 "Coffee":"Kawa",
-"Breakfast":"Śniadanie",
+"Breakfast":"Śniadania",
 "Main Dishes":"Dania główne",
 "Soups":"Zupy",
 "Salads":"Sałatki",
@@ -39,6 +54,11 @@ const pl = {
 
 "Espresso":"Espresso",
 "Double Espresso":"Podwójne Espresso",
+"Americano":"Americano",
+"Cappuccino":"Cappuccino",
+"Latte":"Latte",
+"Flat White":"Flat White",
+
 "Chicken Broth":"Rosół",
 "Ukrainian Borscht":"Barszcz ukraiński",
 
@@ -47,29 +67,69 @@ const pl = {
 "Apple Juice":"Sok jabłkowy",
 "Lemonade":"Lemoniada",
 
-"Bistro & Catering":"Bistro i Catering"
+"Bistro & Catering":"Bistro i Catering",
+"MENU":"MENU"
+
+},
+
+
+en: {
+
+"Kawa":"Coffee",
+"Śniadania":"Breakfast",
+"Dania główne":"Main Dishes",
+"Zupy":"Soups",
+"Sałatki":"Salads",
+"Fast Food":"Fast Food",
+"Koktajle":"Cocktails",
+"Desery":"Desserts",
+"Napoje":"Drinks",
+
+"Rosół":"Chicken Broth",
+"Barszcz ukraiński":"Ukrainian Borscht",
+
+"Herbata":"Tea",
+"Sok pomarańczowy":"Orange Juice",
+"Sok jabłkowy":"Apple Juice",
+"Lemoniada":"Lemonade",
+
+"Bistro i Catering":"Bistro & Catering",
+"MENU":"MENU"
+
+}
 
 };
 
 
+
+function setLanguage(lang){
+
+
 document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
+
 
 let text = el.textContent.trim();
 
-if(lang==="pl"){
 
-    if(pl[text]){
-        el.textContent = pl[text];
-    }
+if(translations[lang][text]){
+
+    el.textContent = translations[lang][text];
 
 }
+
 
 });
 
+
 }
-// -----------------------------
+
+
+
+
+// ===============================
 // Кнопка наверх
-// -----------------------------
+// ===============================
+
 
 const topButton=document.createElement("button");
 
@@ -79,30 +139,38 @@ topButton.id="topButton";
 
 document.body.appendChild(topButton);
 
+
+
 window.addEventListener("scroll",()=>{
 
-    if(window.scrollY>400){
 
-        topButton.style.opacity="1";
-        topButton.style.visibility="visible";
+if(window.scrollY>400){
 
-    }else{
+    topButton.style.opacity="1";
+    topButton.style.visibility="visible";
 
-        topButton.style.opacity="0";
-        topButton.style.visibility="hidden";
+}else{
 
-    }
+    topButton.style.opacity="0";
+    topButton.style.visibility="hidden";
+
+}
+
 
 });
 
+
+
 topButton.onclick=()=>{
 
-    window.scrollTo({
 
-        top:0,
+window.scrollTo({
 
-        behavior:"smooth"
+top:0,
 
-    });
+behavior:"smooth"
+
+});
+
 
 };
