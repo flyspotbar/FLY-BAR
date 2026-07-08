@@ -25,15 +25,50 @@ document.querySelectorAll("section,.item").forEach(el=>{
 
 function setLanguage(lang){
 
-    document.querySelectorAll("[data-pl]").forEach(el=>{
+const translations = {
 
-        if(lang==="pl"){
-            el.innerHTML = el.dataset.pl;
-        } else {
-            el.innerHTML = el.dataset.en;
-        }
+"Coffee":"Kawa",
+"Breakfast":"Śniadania",
+"Main Dishes":"Dania główne",
+"Soups":"Zupy",
+"Salads":"Sałatki",
+"Fast Food":"Fast Food",
+"Cocktails":"Koktajle",
+"Desserts":"Desery",
+"Drinks":"Napoje",
 
-    });
+"Espresso":"Espresso",
+"Double Espresso":"Podwójne Espresso",
+"Americano":"Americano",
+"Cappuccino":"Cappuccino",
+"Latte":"Latte",
+"Flat White":"Flat White",
+
+"Chicken Broth":"Rosół",
+"Ukrainian Borscht":"Barszcz ukraiński",
+
+"Tea":"Herbata",
+"Orange Juice":"Sok pomarańczowy",
+"Apple Juice":"Sok jabłkowy",
+"Lemonade":"Lemoniada",
+
+"Bistro & Catering":"Bistro i Catering",
+"MENU":"MENU"
+
+};
+
+
+document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
+
+let text = el.innerHTML.trim();
+
+if(lang==="pl" && translations[text]){
+
+    el.innerHTML = translations[text];
+
+}
+
+});
 
 }
 
