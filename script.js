@@ -99,29 +99,39 @@ function setLanguage(lang){
 
 document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
-let text = el.textContent.trim();
 
+if(!el.dataset.original){
 
-for(let key in translations[lang]){
-
-if(text.includes(key)){
-
-el.textContent = text.replace(
-key,
-translations[lang][key]
-);
-
-break;
+    el.dataset.original = el.textContent.trim();
 
 }
 
+
+let original = el.dataset.original;
+
+
+if(lang === "pl"){
+
+    if(translations.pl[original]){
+
+        el.textContent = translations.pl[original];
+
+    }
+
 }
+
+
+if(lang === "en"){
+
+    el.textContent = original;
+
+}
+
 
 });
 
+
 }
-
-
 
 // сразу польский
 
