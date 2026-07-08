@@ -25,10 +25,10 @@ document.querySelectorAll("section,.item").forEach(el=>{
 
 function setLanguage(lang){
 
-const translations = {
+const pl = {
 
 "Coffee":"Kawa",
-"Breakfast":"Śniadania",
+"Breakfast":"Śniadanie",
 "Main Dishes":"Dania główne",
 "Soups":"Zupy",
 "Salads":"Sałatki",
@@ -39,11 +39,6 @@ const translations = {
 
 "Espresso":"Espresso",
 "Double Espresso":"Podwójne Espresso",
-"Americano":"Americano",
-"Cappuccino":"Cappuccino",
-"Latte":"Latte",
-"Flat White":"Flat White",
-
 "Chicken Broth":"Rosół",
 "Ukrainian Borscht":"Barszcz ukraiński",
 
@@ -52,26 +47,26 @@ const translations = {
 "Apple Juice":"Sok jabłkowy",
 "Lemonade":"Lemoniada",
 
-"Bistro & Catering":"Bistro i Catering",
-"MENU":"MENU"
+"Bistro & Catering":"Bistro i Catering"
 
 };
 
 
 document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
-let text = el.innerHTML.trim();
+let text = el.textContent.trim();
 
-if(lang==="pl" && translations[text]){
+if(lang==="pl"){
 
-    el.innerHTML = translations[text];
+    if(pl[text]){
+        el.textContent = pl[text];
+    }
 
 }
 
 });
 
 }
-
 // -----------------------------
 // Кнопка наверх
 // -----------------------------
