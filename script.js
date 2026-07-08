@@ -99,31 +99,25 @@ function setLanguage(lang){
 
 document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
-
 let text = el.textContent.trim();
 
 
-for(let key in translations.pl){
+for(let key in translations[lang]){
 
-
-if(lang==="pl" && text.includes(key)){
-
+if(text.includes(key)){
 
 el.textContent = text.replace(
 key,
-translations.pl[key]
+translations[lang][key]
 );
 
+break;
 
 }
 
-
 }
-
-
 
 });
-
 
 }
 
