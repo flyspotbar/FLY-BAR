@@ -86,7 +86,7 @@ en: {
 "Jajecznica z boczkiem":"Scrambled eggs with bacon",
 "Śniadanie angielskie":"English Breakfast",
 
-"Kotlet drobiowy":"Chicken Cutlet",
+"Kotlet z kurczaka":"Chicken Cutlet",
 "Kotlet schabowy":"Pork Cutlet",
 
 "Bistro i Catering":"Bistro & Catering"
