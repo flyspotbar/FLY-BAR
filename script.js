@@ -39,42 +39,69 @@ document.querySelectorAll("section,.item").forEach(el=>{
 const translations = {
 
 pl: {
+pl: {
+
+"Coffee":"Kawa",
+"Breakfast":"Śniadania",
+"Main Dishes":"Lunch",
+"Main dishes":"Lunch",
+"Soups":"Zupy",
+"Salads":"Sałatki",
+"Fast Food":"Fast Food",
+"Cocktails":"Koktajle",
+"Desserts":"Desery",
+"Drinks":"Napoje",
+
+"Espresso":"Espresso",
 "Double Espresso":"Podwójne Espresso",
 "Americano":"Americano",
 "Cappuccino":"Cappuccino",
 "Latte":"Latte",
 "Flat White":"Flat White",
-"Ice Americano":"Americano z lodem",
-"Ice Cappuccino":"Cappuccino z lodem",
-"Ice Latte":"Latte z lodem",
+
+"Ice Americano":"Ice Americano",
+"Ice Cappuccino":"Ice Cappuccino",
+"Ice Latte":"Ice Latte",
 
 "Caramel / Vanilla / Chocolate / Strawberry syrup":"Syrop karmelowy / waniliowy / czekoladowy / truskawkowy",
 "Lactose Free Milk":"Mleko bez laktozy",
 "Oat / Coconut / Almond Milk":"Mleko owsiane / kokosowe / migdałowe",
 
+"Scrambled eggs (3 eggs)":"Jajecznica (3 jajka)",
+"Scrambled eggs with bacon":"Jajecznica z boczkiem",
+"English Breakfast":"Śniadanie angielskie",
 "English Breakfast + Coffee":"Śniadanie angielskie + kawa",
 "Toast with salami & cheese":"Tost z salami i serem",
 "Syrniki with topping":"Syrniki z dodatkiem",
-"Avocado toast with smoked salmon & poached egg":"Tost z awokado, wędzonym łososiem i jajkiem w koszulce",
+"Pancakes":"Naleśniki",
+"Avocado toast with smoked salmon & poached egg":"Tost z awokado, z łososiem i jajkiem w koszulce",
 
+"Pork Cutlet":"Kotlet schabowy",
+"Chicken Cutlet":"Kotlet z kurczaka",
+"Grilled Chicken":"Pierś z kurczaka grillowana",
 "Minced Meat Cutlet":"Kotlet mielony",
+"Grilled Salmon":"Łosoś z grilla",
 "Hungarian Potato Pancakes":"Placki ziemniaczane po węgiersku",
 "Chicken & Mushroom Crepes":"Naleśniki z kurczakiem i pieczarkami",
 "Spaghetti Bolognese":"Spaghetti Bolognese",
-    "Chicken Cutlet":"Kotlet z kurczaka",
 
-"Side dish: potatoes / fries / rice / buckwheat":"Dodatek: ziemniaki / frytki / ryż / kasza",
+"Side dish: potatoes / fries / rice / buckwheat":"Dodatek: ziemniaki / frytki / ryż / kasza gryczana",
 "Included":"W cenie",
+
+"Chicken Broth":"Rosół",
+"Ukrainian Borscht":"Barszcz ukraiński",
 
 "Chicken Salad":"Sałatka z kurczakiem",
 "Shrimp Salad":"Sałatka z krewetkami",
 "Vegetarian Salad":"Sałatka wegetariańska",
 
-"Extra Bacon":"Dodatkowy boczek",
+"Beef Burger with Fries":"Burger wołowy z frytkami",
 "Hot Dog with Bacon & Fries":"Hot Dog z boczkiem i frytkami",
+"Chicken Tortilla":"Tortilla z kurczakiem",
 "Traditional Zapiekanka":"Tradycyjna zapiekanka",
 "Ham Zapiekanka":"Zapiekanka z szynką",
 "Gyros Zapiekanka":"Zapiekanka Gyros",
+"French Fries (200 g)":"Frytki (200 g)",
 "Chicken Nuggets (6 pcs)":"Nuggetsy z kurczaka (6 szt.)",
 "Nuggets + Fries":"Nuggetsy + frytki",
 "Chicken Strips (5 pcs)":"Stripsy z kurczaka (5 szt.)",
@@ -86,90 +113,66 @@ pl: {
 
 "Sauces: Ketchup, Mayo, Mustard, BBQ, 1000 Islands, Curry, American, Garlic":"Sosy: Ketchup, Majonez, Musztarda, BBQ, 1000 Islands, Curry, American, Czosnkowy",
 
+"Fly Energy":"Fly Energy",
+"Mango Wave":"Mango Wave",
 "Virgin Mojito":"Virgin Mojito",
-"Apple Mint":"Jabłko Mięta",
+"Apple Mint":"Apple Mint",
 
+"Honey & Walnut Marlenka":"Marlenka miodowo-orzechowa",
 "Honey & Cocoa Marlenka":"Marlenka miodowo-kakaowa",
 "Jelly Dessert":"Deser galaretkowy",
 
+"Tea":"Herbata",
+"Orange Juice":"Sok pomarańczowy",
+"Apple Juice":"Sok jabłkowy",
 "Fresh Orange Juice":"Świeży sok pomarańczowy",
+"Lemonade":"Lemoniada",
 "Lipton Ice Tea":"Lipton Ice Tea",
 "Oshee Isotonic":"Oshee Isotonic",
+"Schweppes":"Schweppes",
 "Oshee Vitamin":"Oshee Vitamin",
 "Aqua Water":"Woda Aqua",
 "King Water":"Woda King",
+"Borjomi":"Borjomi",
+"Jermuk":"Jermuk",
 "Pepsi / Mirinda / 7UP":"Pepsi / Mirinda / 7UP",
 "Pepsi Can":"Pepsi puszka",
 "Pepsi Bottle":"Pepsi butelka",
-"Non-Alcoholic Beer":"Piwo bezalkoholowe"
-   
-},
+"Red Bull":"Red Bull",
+"Non-Alcoholic Beer":"Piwo bezalkoholowe",
+
+"Bistro & Catering":"Bistro i Catering",
+"MENU":"MENU"
+
+}
 
 
 en: {
 
-"Kawa":"Coffee",
-"Śniadania":"Breakfast",
-"Dania główne":"Main Dishes",
-"Zupy":"Soups",
-"Sałatki":"Salads",
-"Napoje":"Drinks",
-
-"Rosół":"Chicken Broth",
-"Barszcz ukraiński":"Ukrainian Borscht",
-
-"Herbata":"Tea",
-"Sok pomarańczowy":"Orange Juice",
-"Sok jabłkowy":"Apple Juice",
-
-"Jajecznica (3 jajka)":"Scrambled eggs (3 eggs)",
-"Jajecznica z boczkiem":"Scrambled eggs with bacon",
-"Śniadanie angielskie":"English Breakfast",
-
-"Kotlet z kurczaka":"Chicken Cutlet",
-"Kotlet schabowy":"Pork Cutlet",
-
-"Bistro i Catering":"Bistro & Catering"
-
 }
-
-};
-
 function setLanguage(lang){
 
 document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
+let text = el.dataset.original || el.textContent.trim();
 
-if(!el.dataset.original){
-
-    el.dataset.original = el.textContent.trim();
-
-}
+el.dataset.original = text;
 
 
-let original = el.dataset.original;
+if(lang==="pl" && translations.pl[text]){
 
-
-if(lang === "pl"){
-
-    if(translations.pl[original]){
-
-        el.textContent = translations.pl[original];
-
-    }
+el.textContent = translations.pl[text];
 
 }
 
 
-if(lang === "en"){
+if(lang==="en"){
 
-    el.textContent = original;
+el.textContent = text;
 
 }
-
 
 });
-
 
 }
 
