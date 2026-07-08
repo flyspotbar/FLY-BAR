@@ -153,28 +153,20 @@ en: {}
 
 function setLanguage(lang){
 
-    const elements = document.querySelectorAll("h1,h2,h3,p,span,a");
-
-    elements.forEach(el=>{
+    document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
         let text = el.textContent.trim();
 
-        if(lang === "pl"){
+        for(let key in translations[lang]){
 
-            if(translations.pl[text]){
+            if(text.includes(key)){
 
-                el.textContent = translations.pl[text];
+                el.textContent = text.replace(
+                    key,
+                    translations[lang][key]
+                );
 
-            }
-
-        }
-
-        if(lang === "en"){
-
-            if(translations.en[text]){
-
-                el.textContent = translations.en[text];
-
+                break;
             }
 
         }
