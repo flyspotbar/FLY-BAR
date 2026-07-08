@@ -1,122 +1,22 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FLY BAR</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>FLY BAR | Bistro & Catering</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-body{
-background:#0d0d0d;
-color:white;
-font-family:'Poppins',sans-serif;
-}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-header{
-background:black;
-padding:25px;
-text-align:center;
-border-bottom:3px solid #d40000;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-header img{
-width:120px;
-border-radius:50%;
-}
-
-h1{
-margin-top:15px;
-font-size:42px;
-letter-spacing:4px;
-color:#fff;
-}
-
-.lang{
-margin-top:15px;
-}
-
-.lang button{
-background:#d40000;
-color:white;
-border:none;
-padding:10px 20px;
-margin:5px;
-cursor:pointer;
-border-radius:30px;
-font-size:16px;
-}
-
-nav{
-display:flex;
-overflow:auto;
-gap:10px;
-padding:15px;
-background:#151515;
-position:sticky;
-top:0;
-z-index:999;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-background:#d40000;
-padding:10px 18px;
-border-radius:25px;
-white-space:nowrap;
-}
-
-section{
-padding:45px 20px;
-max-width:1000px;
-margin:auto;
-}
-
-h2{
-color:#ff2d2d;
-margin-bottom:20px;
-border-left:5px solid #ff2d2d;
-padding-left:10px;
-}
-
-.item{
-display:flex;
-justify-content:space-between;
-padding:15px 0;
-border-bottom:1px solid #333;
-font-size:18px;
-}
-
-.price{
-font-weight:bold;
-color:#fff;
-}
-
-footer{
-background:black;
-padding:40px;
-text-align:center;
-border-top:3px solid #d40000;
-}
-
-footer a{
-color:#ff4040;
-text-decoration:none;
-display:block;
-margin:10px;
-}
-
-</style>
+<script src="script.js" defer></script>
 
 </head>
 
@@ -124,27 +24,100 @@ margin:10px;
 
 <header>
 
-<h1>FLY BAR</h1>
+<div class="overlay">
 
-<p>Chorzowska 100 • Katowice</p>
+<nav>
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+</div>
+
+<ul>
+
+<li><a href="#coffee" data-pl="Kawa" data-en="Coffee">Kawa</a></li>
+
+<li><a href="#breakfast" data-pl="Śniadania" data-en="Breakfast">Śniadania</a></li>
+
+<li><a href="#lunch" data-pl="Obiady" data-en="Main dishes">Obiady</a></li>
+
+<li><a href="#fastfood">Fast Food</a></li>
+
+<li><a href="#salads" data-pl="Sałatki" data-en="Salads">Sałatki</a></li>
+
+<li><a href="#desserts" data-pl="Desery" data-en="Desserts">Desery</a></li>
+
+<li><a href="#cocktails" data-pl="Koktajle" data-en="Cocktails">Koktajle</a></li>
+
+<li><a href="#drinks" data-pl="Napoje" data-en="Drinks">Napoje</a></li>
+
+<li><a href="#soups" data-pl="Zupy" data-en="Soups">Zupy</a></li>
+
+</ul>
 
 <div class="lang">
-<button>🇵🇱 Polski</button>
-<button>🇬🇧 English</button>
+
+<button onclick="setLanguage('pl')">🇵🇱</button>
+
+<button onclick="setLanguage('en')">🇬🇧</button>
+
+</div>
+
+</nav>
+
+<div class="hero">
+
+<h1>FLY BAR</h1>
+
+<p>Bistro & Catering</p>
+
+<span>Chorzowska 100 • Katowice</span>
+
+<div class="hero-buttons">
+
+<a href="#menu" class="btn">MENU</a>
+
+<a href="https://www.instagram.com/flyspotbar" target="_blank" class="btn">Instagram</a>
+
+<a href="https://www.facebook.com/share/1CvhnYeEoh/" target="_blank" class="btn">Facebook</a>
+
+</div>
+
+</div>
+
 </div>
 
 </header>
 
-<nav>
+<section id="menu">
 
-<a href="#kawa">☕ Kawa</a>
-<a href="#napoje">🥤 Napoje</a>
-<a href="#sniadanie">🍳 Śniadanie</a>
-<a href="#obiady">🍽 Obiady</a>
-<a href="#zupy">🍲 Zupy</a>
-<a href="#salatki">🥗 Sałatki</a>
-<a href="#fastfood">🍔 Fast Food</a>
-<a href="#koktajle">🍹 Koktajle</a>
-<a href="#desery">🍰 Desery</a>
+<h2>☕ Coffee</h2>
 
-</nav>
+<div id="coffee" class="menu-section">
+
+<div class="item"><span>Espresso</span><span>10 zł</span></div>
+
+<div class="item"><span>Double Espresso</span><span>13 zł</span></div>
+
+<div class="item"><span>Americano</span><span>12 zł</span></div>
+
+<div class="item"><span>Cappuccino</span><span>14 zł</span></div>
+
+<div class="item"><span>Latte</span><span>16 zł</span></div>
+
+<div class="item"><span>Flat White</span><span>17 zł</span></div>
+
+<div class="item"><span>Ice Americano</span><span>13 zł</span></div>
+
+<div class="item"><span>Ice Cappuccino</span><span>15 zł</span></div>
+
+<div class="item"><span>Ice Latte</span><span>17 zł</span></div>
+
+<div class="item"><span>Caramel / Vanilla / Chocolate / Strawberry syrup</span><span>+2 zł</span></div>
+
+<div class="item"><span>Lactose-free milk</span><span>+1 zł</span></div>
+
+<div class="item"><span>Oat / Coconut / Almond milk</span><span>+2 zł</span></div>
+
+</div>
