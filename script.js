@@ -182,25 +182,9 @@ function setLanguage(lang){
     });
 
 }
-
-
-document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
-
-
-let text = el.textContent.trim();
-
-
-if(translations[lang][text]){
-
-    el.textContent = translations[lang][text];
-
-}
-
-
+window.addEventListener("load", function(){
+    setLanguage("pl");
 });
-
-
-}
 
 
 
