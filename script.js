@@ -45,17 +45,7 @@ pl: {
 "Main Dishes":"Dania główne",
 "Soups":"Zupy",
 "Salads":"Sałatki",
-"Fast Food":"Fast Food",
-"Cocktails":"Koktajle",
-"Desserts":"Desery",
 "Drinks":"Napoje",
-
-"Espresso":"Espresso",
-"Double Espresso":"Podwójne Espresso",
-"Americano":"Americano",
-"Cappuccino":"Cappuccino",
-"Latte":"Latte",
-"Flat White":"Flat White",
 
 "Chicken Broth":"Rosół",
 "Ukrainian Borscht":"Barszcz ukraiński",
@@ -63,35 +53,47 @@ pl: {
 "Tea":"Herbata",
 "Orange Juice":"Sok pomarańczowy",
 "Apple Juice":"Sok jabłkowy",
-"Lemonade":"Lemoniada",
 
 "Scrambled eggs (3 eggs)":"Jajecznica (3 jajka)",
 "Scrambled eggs with bacon":"Jajecznica z boczkiem",
 "English Breakfast":"Śniadanie angielskie",
-"Pancakes":"Naleśniki",
 
 "Chicken Cutlet":"Kotlet drobiowy",
 "Pork Cutlet":"Kotlet schabowy",
-"Grilled Chicken":"Kurczak z grilla",
-"Grilled Salmon":"Łosoś z grilla",
 
-"Beef Burger with Fries":"Burger wołowy z frytkami",
-"Chicken Tortilla":"Tortilla z kurczakiem",
-"French Fries (200 g)":"Frytki (200 g)",
+"Bistro & Catering":"Bistro i Catering"
 
-"Fly Energy":"Fly Energy",
-"Mango Wave":"Mango Wave",
+},
 
-"Honey & Walnut Marlenka":"Marlenka miodowo-orzechowa",
 
-"Bistro & Catering":"Bistro i Catering",
-"MENU":"MENU"
+en: {
+
+"Kawa":"Coffee",
+"Śniadania":"Breakfast",
+"Dania główne":"Main Dishes",
+"Zupy":"Soups",
+"Sałatki":"Salads",
+"Napoje":"Drinks",
+
+"Rosół":"Chicken Broth",
+"Barszcz ukraiński":"Ukrainian Borscht",
+
+"Herbata":"Tea",
+"Sok pomarańczowy":"Orange Juice",
+"Sok jabłkowy":"Apple Juice",
+
+"Jajecznica (3 jajka)":"Scrambled eggs (3 eggs)",
+"Jajecznica z boczkiem":"Scrambled eggs with bacon",
+"Śniadanie angielskie":"English Breakfast",
+
+"Kotlet drobiowy":"Chicken Cutlet",
+"Kotlet schabowy":"Pork Cutlet",
+
+"Bistro i Catering":"Bistro & Catering"
 
 }
 
 };
-
-
 
 function setLanguage(lang){
 
