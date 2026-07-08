@@ -28,9 +28,9 @@ function setLanguage(lang){
     document.querySelectorAll("[data-pl]").forEach(el=>{
 
         if(lang==="pl"){
-            el.innerHTML=el.dataset.pl;
-        }else{
-            el.innerHTML=el.dataset.en;
+            el.innerHTML = el.dataset.pl;
+        } else {
+            el.innerHTML = el.dataset.en;
         }
 
     });
