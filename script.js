@@ -27,7 +27,6 @@ const observer = new IntersectionObserver((entries)=>{
 
 document.querySelectorAll("section,.item").forEach(el=>{
 
-    el.classList.add("hidden");
     observer.observe(el);
 
 });
