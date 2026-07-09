@@ -44,6 +44,7 @@ pl: {
 "Breakfast":"Śniadania",
 "Main Dishes":"Lunch",
 "Main dishes":"Lunch",
+"🍽 Main Dishes":"🍽 Lunch",
 "Soups":"Zupy",
 "Salads":"Sałatki",
 "Fast Food":"Fast Food",
