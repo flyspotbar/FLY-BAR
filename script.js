@@ -154,19 +154,7 @@ pl:{
 
 },
 
-en:{
-
-"Godziny otwarcia":"Opening Hours",
-"Poniedziałek":"Monday",
-"Wtorek":"Tuesday",
-"Środa":"Wednesday",
-"Czwartek":"Thursday",
-"Piątek":"Friday",
-"Sobota":"Saturday",
-"Niedziela":"Sunday",
-"zamknięte":"closed"
-
-}
+en:{}
 
   };
 
@@ -180,32 +168,30 @@ function setLanguage(lang){
 document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
 
-    if(!el.dataset.pl){
+let text = el.textContent.trim();
 
-        el.dataset.pl = el.textContent.trim();
 
+if(lang === "pl"){
+
+    if(translations.pl[text]){
+        el.textContent = translations.pl[text];
     }
 
+}
 
-    let plText = el.dataset.pl;
+
+if(lang === "en"){
 
 
-    if(lang === "pl"){
+    let english = Object.keys(translations.pl)
+    .find(key => translations.pl[key] === text);
 
-        el.textContent = translations.pl[plText] || plText;
 
+    if(english){
+        el.textContent = english;
     }
 
-
-    if(lang === "en"){
-
-        let english = Object.keys(translations.pl)
-        .find(key => translations.pl[key] === plText);
-
-
-        el.textContent = english || plText;
-
-    }
+}
 
 
 });
