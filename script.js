@@ -43,7 +43,7 @@ pl:{
 
 "Coffee":"Kawa",
 "Breakfast":"Śniadania",
-"Lunch":"Lunch",
+"Lunch":"Obiady",
 "Soups":"Zupy",
 "Salads":"Sałatki",
 "Fast Food":"Fast Food",
