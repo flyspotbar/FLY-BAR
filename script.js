@@ -75,7 +75,7 @@ pl:{
 "English Breakfast + Coffee":"Śniadanie angielskie + kawa",
 "Toast with salami & cheese":"Tost z salami i serem",
 "Syrniki with topping":"Syrniki z dodatkiem",
-"Pancakes":"Naleśniki",
+"Pancakes":"Pancakes",
 "Avocado toast with smoked salmon & poached egg":"Tost z awokado, z łososiem i jajkiem w koszulce",
 
 "Pork Cutlet":"Kotlet schabowy",
