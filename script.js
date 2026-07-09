@@ -152,46 +152,41 @@ en: {
 }
 function setLanguage(lang){
 
-document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
+    document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
-    if(!el.dataset.original){
+        if(!el.dataset.en){
+            el.dataset.en = el.textContent.trim();
+        }
 
-        el.dataset.original = el.textContent.trim();
-
-    }
-
-
-    let original = el.dataset.original;
+        let original = el.dataset.en;
 
 
-    if(lang==="pl"){
+        if(lang === "pl"){
 
-        if(translations.pl[original]){
+            if(translations.pl[original]){
 
-            el.textContent = translations.pl[original];
+                el.textContent = translations.pl[original];
+
+            }
 
         }
 
-    }
 
+        if(lang === "en"){
 
-    if(lang==="en"){
+            el.textContent = original;
 
-        el.textContent = original;
+        }
 
-    }
-
-});
+    });
 
 }
 
 // сразу польский
 
-document.addEventListener("DOMContentLoaded",()=>{
-
-setLanguage("pl");
-
-});
+window.onload = function(){
+    setLanguage("pl");
+};
 
 
 
