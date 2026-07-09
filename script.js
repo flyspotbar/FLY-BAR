@@ -177,39 +177,39 @@ en:{
 
 function setLanguage(lang){
 
-    document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
-
-        if(!el.dataset.original){
-            el.dataset.original = el.textContent.trim();
-        }
-
-        let original = el.dataset.original;
+document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
 
-        if(lang === "pl"){
+    if(!el.dataset.pl){
 
-            if(translations.pl[original]){
-                el.textContent = translations.pl[original];
-            }
-            else{
-                el.textContent = original;
-            }
+        el.dataset.pl = el.textContent.trim();
 
-        }
+    }
 
 
-        if(lang === "en"){
+    let plText = el.dataset.pl;
 
-            if(translations.en[original]){
-                el.textContent = translations.en[original];
-            }
-            else{
-                el.textContent = original;
-            }
 
-        }
+    if(lang === "pl"){
 
-    });
+        el.textContent = translations.pl[plText] || plText;
+
+    }
+
+
+    if(lang === "en"){
+
+        let english = Object.keys(translations.pl)
+        .find(key => translations.pl[key] === plText);
+
+
+        el.textContent = english || plText;
+
+    }
+
+
+});
+
 
 }
 
