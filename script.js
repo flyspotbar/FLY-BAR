@@ -140,7 +140,17 @@ pl:{
 "Pepsi Can":"Pepsi puszka",
 "Pepsi Bottle":"Pepsi butelka",
 "Red Bull":"Red Bull",
-"Non-Alcoholic Beer":"Piwo bezalkoholowe"
+"Non-Alcoholic Beer":"Piwo bezalkoholowe",
+
+"Opening Hours":"Godziny otwarcia",
+"Monday":"Poniedziałek",
+"Tuesday":"Wtorek",
+"Wednesday":"Środa",
+"Thursday":"Czwartek",
+"Friday":"Piątek",
+"Saturday":"Sobota",
+"Sunday":"Niedziela",
+"closed":"zamknięte"
 
 },
 
