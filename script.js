@@ -165,6 +165,7 @@ en:{}
 // ===============================
 
 function setLanguage(lang){
+    alert("Язык: " + lang);
 
     document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
