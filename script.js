@@ -155,26 +155,8 @@ en:{}
 
 function setLanguage(lang){
 
- console.log("translate elements:", document.querySelectorAll(".translate"));
-
-        if(lang === "en"){
-
-            el.innerHTML = el.dataset.en;
-
-        }else{
-
-            el.innerHTML = el.dataset.pl;
-
-        }
-
-    });
-
 
     document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
-
-        if(el.classList.contains("translate")){
-            return;
-        }
 
 
         if(!el.dataset.original){
@@ -184,10 +166,11 @@ function setLanguage(lang){
         }
 
 
-        let original = el.dataset.original;
+        const original = el.dataset.original;
 
 
         if(lang === "pl"){
+
 
             if(translations.pl[original]){
 
@@ -195,13 +178,18 @@ function setLanguage(lang){
 
             }
 
+
         }else{
+
 
             el.textContent = original;
 
+
         }
 
+
     });
+
 
 }
 // ===============================
