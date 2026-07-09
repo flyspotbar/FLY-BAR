@@ -167,14 +167,14 @@ function setLanguage(lang){
 
     document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
-        if(!el.dataset.en){
+        if(!el.dataset.original){
 
-            el.dataset.en = el.textContent.trim();
+            el.dataset.original = el.textContent.trim();
 
         }
 
 
-        let original = el.dataset.en;
+        let original = el.dataset.original;
 
 
         if(lang === "pl"){
