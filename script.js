@@ -39,7 +39,6 @@ document.querySelectorAll("section,.item").forEach(el=>{
 const translations = {
 
 pl: {
-pl: {
 
 "Coffee":"Kawa",
 "Breakfast":"Śniadania",
@@ -154,23 +153,32 @@ function setLanguage(lang){
 
 document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
-let text = el.dataset.original || el.textContent.trim();
+    if(!el.dataset.original){
 
-el.dataset.original = text;
+        el.dataset.original = el.textContent.trim();
 
-
-if(lang==="pl" && translations.pl[text]){
-
-el.textContent = translations.pl[text];
-
-}
+    }
 
 
-if(lang==="en"){
+    let original = el.dataset.original;
 
-el.textContent = text;
 
-}
+    if(lang==="pl"){
+
+        if(translations.pl[original]){
+
+            el.textContent = translations.pl[original];
+
+        }
+
+    }
+
+
+    if(lang==="en"){
+
+        el.textContent = original;
+
+    }
 
 });
 
