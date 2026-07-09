@@ -39,7 +39,6 @@ document.querySelectorAll("section,.item").forEach(el=>{
 const translations = {
 
 pl:{
-    "Coffee":"TEST KAWA",
 
 "Coffee":"Kawa",
 "Breakfast":"Śniadania",
