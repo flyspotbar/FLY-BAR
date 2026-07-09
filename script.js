@@ -167,57 +167,51 @@ function setLanguage(lang){
 
     document.querySelectorAll(".translate").forEach(el=>{
 
-        if(lang === "en"){
-            el.textContent = el.dataset.en;
-        } else {
-            el.textContent = el.dataset.pl;
-        }
+        el.textContent = lang === "en"
+        ? el.dataset.en
+        : el.dataset.pl;
 
     });
 
 
     document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
+
         if(el.classList.contains("translate")){
             return;
         }
 
 
-        if(!el.dataset.original){
+        if(!el.dataset.pl){
 
-            el.dataset.original = el.textContent.trim();
+            el.dataset.pl = el.textContent.trim();
 
         }
 
 
-        let original = el.dataset.original;
+        let plText = el.dataset.pl;
 
 
         if(lang === "pl"){
 
-            if(translations.pl[original]){
+            if(translations.en[plText]){
 
-                el.textContent = translations.pl[original];
+                el.textContent = plText;
+
+            }
+
+            else if(translations.pl[plText]){
+
+                el.textContent = translations.pl[plText];
 
             }
 
         }
 
-
-        if(lang === "en"){
-
-            if(translations.en[original]){
-
-                el.textContent = translations.en[original];
-
-            }
-
-        }
 
     });
 
 }
-
 // ===============================
 // Кнопка наверх
 // ===============================
@@ -262,4 +256,6 @@ topButton.onclick = ()=>{
 
 console.log("НОВЫЙ SCRIPT РАБОТАЕТ");
 // Стартовый язык
-setLanguage("pl");
+window.onload = function(){
+    setLanguage("pl");
+};
