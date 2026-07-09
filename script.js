@@ -165,13 +165,53 @@ en:{}
 
 function setLanguage(lang){
 
+    document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
+
+        if(!el.dataset.original){
+
+            el.dataset.original = el.textContent.trim();
+
+        }
+
+
+        let original = el.dataset.original;
+
+
+        if(lang === "pl"){
+
+            if(translations.pl[original]){
+
+                el.textContent = translations.pl[original];
+
+            }
+            else{
+
+                el.textContent = original;
+
+            }
+
+        }
+
+
+        if(lang === "en"){
+
+            el.textContent = original;
+
+        }
+
+    });
+
+
     document.querySelectorAll(".translate").forEach(el=>{
 
         if(lang === "en"){
+
             el.textContent = el.dataset.en;
-        }
-        else{
+
+        }else{
+
             el.textContent = el.dataset.pl;
+
         }
 
     });
