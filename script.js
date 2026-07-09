@@ -177,35 +177,35 @@ en:{
 
 function setLanguage(lang){
 
-
     document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
         if(!el.dataset.original){
-
             el.dataset.original = el.textContent.trim();
-
         }
-
 
         let original = el.dataset.original;
 
 
         if(lang === "pl"){
-            console.log("Ищу перевод:", original);
 
             if(translations.pl[original]){
-
                 el.textContent = translations.pl[original];
-
-            }else{
-
+            }
+            else{
                 el.textContent = original;
-
             }
 
-        }else{
+        }
 
-            el.textContent = original;
+
+        if(lang === "en"){
+
+            if(translations.en[original]){
+                el.textContent = translations.en[original];
+            }
+            else{
+                el.textContent = original;
+            }
 
         }
 
