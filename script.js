@@ -255,6 +255,6 @@ topButton.onclick = ()=>{
 // ===============================
 
 
-
+console.log("НОВЫЙ SCRIPT РАБОТАЕТ");
 // Стартовый язык
 setLanguage("pl");
