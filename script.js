@@ -155,51 +155,54 @@ en:{}
 
 function setLanguage(lang){
 
-document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
+    document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
-    if(el.closest(".hours")){
-        return;
-    }
-let original = el.dataset.en || el.textContent.trim();
+        // не переводим блок времени
+        if(el.closest(".hours")){
+            return;
+        }
 
-if(!el.dataset.en){
-    el.dataset.en = original;
-}
+        if(!el.dataset.en){
+            el.dataset.en = el.textContent.trim();
+        }
+
+        const original = el.dataset.en;
 
 
-if(lang==="pl"){
+        if(lang === "pl"){
 
-    let text = translations.pl[original];
+            let text = translations.pl[original];
 
-    if(text){
-        el.textContent = text;
-    }
-    else{
+            if(text){
 
-        for(let key in translations.pl){
+                el.textContent = text;
 
-            if(original.includes(key)){
+            }
+            else{
 
-                el.textContent =
-                original.replace(key, translations.pl[key]);
+                for(let key in translations.pl){
 
-                break;
+                    if(original.includes(key)){
+
+                        el.textContent =
+                        original.replace(key, translations.pl[key]);
+
+                        break;
+
+                    }
+
+                }
 
             }
 
+        }else{
+
+            el.textContent = original;
+
         }
 
-    }
 
-}
-else{
-
-    el.textContent = original;
-
-}
-
-
-});
+    });
 
 }
 
