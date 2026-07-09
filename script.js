@@ -155,43 +155,40 @@ en:{}
 
 function setLanguage(lang){
 
-
     document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
+        if(!el.dataset.en){
 
-        if(!el.dataset.original){
-
-            el.dataset.original = el.textContent.trim();
+            el.dataset.en = el.textContent.trim();
 
         }
 
 
-        const original = el.dataset.original;
+        let original = el.dataset.en;
 
 
         if(lang === "pl"){
-
 
             if(translations.pl[original]){
 
                 el.textContent = translations.pl[original];
 
-            }
+            }else{
 
+                el.textContent = original;
+
+            }
 
         }else{
 
-
             el.textContent = original;
-
 
         }
 
-
     });
 
-
 }
+
 // ===============================
 // Кнопка наверх
 // ===============================
