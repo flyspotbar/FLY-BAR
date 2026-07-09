@@ -155,19 +155,58 @@ en:{}
 
 function setLanguage(lang){
 
-   document.querySelectorAll(".translate").forEach(el=>{
+    // перевод часов работы
+    document.querySelectorAll(".translate").forEach(el=>{
 
-    if(lang === "en"){
+        if(lang === "en"){
 
-        el.textContent = el.dataset.en;
+            el.textContent = el.dataset.en;
 
-    }else{
+        }else{
 
-        el.textContent = el.dataset.pl;
+            el.textContent = el.dataset.pl;
 
-    }
+        }
 
-});
+    });
+
+
+    // перевод всего сайта
+    document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
+
+        if(el.classList.contains("translate")){
+            return;
+        }
+
+
+        if(!el.dataset.original){
+
+            el.dataset.original = el.textContent.trim();
+
+        }
+
+
+        const original = el.dataset.original;
+
+
+        if(lang === "pl"){
+
+            if(translations.pl[original]){
+
+                el.textContent = translations.pl[original];
+
+            }
+
+        }else{
+
+            el.textContent = original;
+
+        }
+
+
+    });
+
+}
 
 // ===============================
 // Кнопка наверх
