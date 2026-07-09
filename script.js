@@ -155,7 +155,7 @@ en:{}
 
 function setLanguage(lang){
 
-document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
+document.querySelectorAll("header h1, header p, header span, section:not(.hours) h2, section:not(.hours) p, section:not(.hours) span, section:not(.hours) a, footer h3, footer p, footer a").forEach(el=>{
 
 let original = el.dataset.en || el.textContent.trim();
 
