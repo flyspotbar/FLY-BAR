@@ -220,3 +220,20 @@ topButton.onclick = ()=>{
     });
 
 };
+// ===============================
+// Кнопки языка
+// ===============================
+
+document.querySelectorAll("[data-lang]").forEach(btn=>{
+
+    btn.onclick = ()=>{
+
+        setLanguage(btn.dataset.lang);
+
+    };
+
+});
+
+
+// Стартовый язык
+setLanguage("pl");
