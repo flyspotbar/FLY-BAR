@@ -155,7 +155,7 @@ en:{}
 
 function setLanguage(lang){
 
-    document.querySelectorAll(".translate").forEach(el=>{
+ console.log("translate elements:", document.querySelectorAll(".translate"));
 
         if(lang === "en"){
 
