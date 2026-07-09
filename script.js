@@ -156,36 +156,50 @@ en:{}
 
 function setLanguage(lang){
 
-    document.querySelectorAll("*").forEach(el=>{
+document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
-        if(el.children.length === 0){
+let original = el.dataset.en || el.textContent.trim();
 
-            if(!el.dataset.en){
-                el.dataset.en = el.textContent.trim();
-            }
+if(!el.dataset.en){
+    el.dataset.en = original;
+}
 
-            const original = el.dataset.en;
 
-            if(lang === "pl"){
+if(lang==="pl"){
 
-                if(translations.pl[original]){
-                    el.textContent = translations.pl[original];
-                }else{
-                    el.textContent = original;
-                }
+    let text = translations.pl[original];
 
-            }else{
+    if(text){
+        el.textContent = text;
+    }
+    else{
 
-                el.textContent = original;
+        for(let key in translations.pl){
+
+            if(original.includes(key)){
+
+                el.textContent =
+                original.replace(key, translations.pl[key]);
+
+                break;
 
             }
 
         }
 
-    });
+    }
+
+}
+else{
+
+    el.textContent = original;
 
 }
 
+
+});
+
+}
 
 // ===============================
 // Кнопка наверх
@@ -228,15 +242,6 @@ topButton.onclick = ()=>{
 // Кнопки языка
 // ===============================
 
-document.querySelectorAll("[data-lang]").forEach(btn=>{
-
-    btn.onclick = ()=>{
-
-        setLanguage(btn.dataset.lang);
-
-    };
-
-});
 
 
 // Стартовый язык
