@@ -384,7 +384,54 @@ font-size:16px;
 }
 
 }
+/* ===== OPENING HOURS ===== */
 
+.hours-box{
+
+    max-width:600px;
+
+    margin:auto;
+
+    background:#171717;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,0,0,.3);
+
+}
+
+
+.hours-box p{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #333;
+
+    color:#ddd;
+
+}
+
+
+.hours-box p:last-child{
+
+    border-bottom:none;
+
+}
+
+
+.hours-box span{
+
+    color:#ff3131;
+
+    font-weight:600;
+
+}
 @media(max-width:600px){
 
 .hero h1{
