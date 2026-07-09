@@ -154,7 +154,19 @@ pl:{
 
 },
 
-en:{}
+en:{
+
+"Godziny otwarcia":"Opening Hours",
+"Poniedziałek":"Monday",
+"Wtorek":"Tuesday",
+"Środa":"Wednesday",
+"Czwartek":"Thursday",
+"Piątek":"Friday",
+"Sobota":"Saturday",
+"Niedziela":"Sunday",
+"zamknięte":"closed"
+
+}
 
   };
 
