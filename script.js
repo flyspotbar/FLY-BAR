@@ -155,7 +155,7 @@ en:{}
 
 function setLanguage(lang){
 
-    // перевод часов работы
+    // перевод элементов с data-pl / data-en
     document.querySelectorAll(".translate").forEach(el=>{
 
         if(lang === "en"){
@@ -171,13 +171,12 @@ function setLanguage(lang){
     });
 
 
-    // перевод всего сайта
+    // перевод меню и блюд
     document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
 
         if(el.classList.contains("translate")){
             return;
         }
-
 
         if(!el.dataset.original){
 
@@ -186,7 +185,7 @@ function setLanguage(lang){
         }
 
 
-        const original = el.dataset.original;
+        let original = el.dataset.original;
 
 
         if(lang === "pl"){
@@ -197,17 +196,16 @@ function setLanguage(lang){
 
             }
 
-        }else{
+        }
+        else{
 
             el.textContent = original;
 
         }
 
-
     });
 
 }
-
 // ===============================
 // Кнопка наверх
 // ===============================
