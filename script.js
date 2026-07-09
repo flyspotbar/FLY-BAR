@@ -155,47 +155,19 @@ en:{}
 
 function setLanguage(lang){
 
-    document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
+   document.querySelectorAll(".translate").forEach(el=>{
 
-        // часы не трогаем
-        if(el.closest(".hours")){
-            return;
-        }
+    if(lang === "en"){
 
+        el.textContent = el.dataset.en;
 
-        if(!el.dataset.original){
+    }else{
 
-            el.dataset.original = el.textContent.trim();
+        el.textContent = el.dataset.pl;
 
-        }
+    }
 
-
-        const original = el.dataset.original;
-
-
-        if(lang === "pl"){
-
-            if(translations.pl[original]){
-
-                el.textContent = translations.pl[original];
-
-            }else{
-
-                el.textContent = original;
-
-            }
-
-
-        }else{
-
-            el.textContent = original;
-
-        }
-
-
-    });
-
-}
+});
 
 // ===============================
 // Кнопка наверх
