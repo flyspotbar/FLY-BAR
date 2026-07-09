@@ -156,25 +156,29 @@ en:{}
 
 function setLanguage(lang){
 
-    document.querySelectorAll("h1,h2,h3,p,span,a").forEach(el=>{
+    document.querySelectorAll("*").forEach(el=>{
 
-        if(!el.dataset.en){
-            el.dataset.en = el.textContent.trim();
-        }
+        if(el.children.length === 0){
 
-        const original = el.dataset.en;
-
-        if(lang === "pl"){
-
-            if(translations.pl[original]){
-                el.textContent = translations.pl[original];
-            }else{
-                el.textContent = original;
+            if(!el.dataset.en){
+                el.dataset.en = el.textContent.trim();
             }
 
-        }else{
+            const original = el.dataset.en;
 
-            el.textContent = original;
+            if(lang === "pl"){
+
+                if(translations.pl[original]){
+                    el.textContent = translations.pl[original];
+                }else{
+                    el.textContent = original;
+                }
+
+            }else{
+
+                el.textContent = original;
+
+            }
 
         }
 
